@@ -10,5 +10,3 @@ title: Projects
     </li>
   <% end %>
 </ul>
-
-If you have a lot of projects, you may want to consider adding [pagination](https://www.bridgetownrb.com/docs/content/pagination)!
