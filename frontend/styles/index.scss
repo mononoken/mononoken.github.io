@@ -1,19 +1,69 @@
+@import "reset.scss";
+
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: "SourceSerif Variable";
+    src: url("../fonts/SourceSerif4-Variable-subset.woff2") format("woff2");
+    font-weight: 1 999;
+    font-style: oblique 0deg 10deg;
+    font-display: swap;
+  }
+}
+
+@font-face {
+  font-family: "SourceSerif Static";
+  src:
+    url("../fonts/SourceSerif4-static-subset.woff2") format("woff2"),
+    url("../fonts/SourceSerif4-static-subset.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MontaguSlab Bold";
+  src: url("../fonts/MontaguSlab-Bold-subset.woff2") format("woff2");
+  font-weight: 700;
+  font-style: bold;
+  font-display: swap;
+}
+
 :root {
-  --body-background: #f2f2f2;
-  --body-color: #444;
-  --heading-color: black;
-  --action-color: #d64045;
+  --body-background: #24283b;
+  --body-color: #c0caf5;
+  // --main-background: #24283b;
+  // --heading-color: #bb9af7;
+  --hero-color: #bb9af7;
+  --action-color: #ff9e64;
+  --action-hover-color: #f7768e;
+  --action-focus-color: #8c4351;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
   background: var(--body-background);
   color: var(--body-color);
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    "Helvetica", "Arial", sans-serif;
-  margin: 0 8px;
-  font-size: 108%;
+  font-family:
+    "SourceSerif",
+    "SourceSerif Static",
+    -apple-system,
+    Times New Roman,
+    serif;
+  margin: 0 auto;
+  padding: 0 22px;
+  // font-size: 108%;
+  font-size: 17px;
   line-height: 1.5;
+  max-width: 42rem;
 }
 
 a {
@@ -22,13 +72,27 @@ a {
   text-decoration-color: #ffb088;
 }
 
-h1 {
-  margin: 1rem 0 3rem;
-  text-align: center;
-  font-weight: 900;
-  font-size: 2.5rem;
+h1,
+h2,
+h3,
+h4 {
+  font-family:
+    "MontaguSlab Bold",
+    -apple-system,
+    Times New Roman,
+    serif;
   color: var(--heading-color);
+  margin: 0 0 1rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
   line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.5rem;
 }
 
 body > header {
@@ -42,38 +106,39 @@ body > header img {
   max-width: 100%;
 }
 
-body > nav ul {
-  margin: 2rem 0;
+body > nav {
+  margin: 1rem 0;
   padding: 0;
   list-style-type: none;
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  font-size: 1.3rem;
+  justify-content: space-between;
+  align-items: center;
   font-weight: bold;
 }
 
-body > nav a {
-  text-decoration: none;
+body > nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+body > nav a:hover {
+  color: var(--action-hover-color);
+}
+
+body > nav a:focus {
+  color: var(--action-focus-color);
 }
 
 main {
-  margin: 2rem auto 4rem;
-  max-width: 65rem;
+  margin: 0 auto 4rem;
   min-height: calc(100vh - 200px);
-  padding: 25px 25px 50px;
-  background: white;
-  box-shadow: 2px 3px 3px #ddd;
-  border-radius: 3px;
-
-  @media (max-width: 500px) {
-    padding: 16px 16px 50px;
-  }
 }
 
 footer {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   font-size: 1em;
 }
 
@@ -81,4 +146,24 @@ hr {
   border: none;
   border-top: 2px dotted #bbb;
   margin: 3rem 0;
+}
+
+.hero {
+  font-family:
+    "MontaguSlab Bold",
+    -apple-system,
+    Times New Roman,
+    serif;
+  font-size: 2rem;
+  color: var(--hero-color);
+}
+
+.project h1 {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.hero img {
+  max-width: 100%;
+  max-height: 400px;
 }
