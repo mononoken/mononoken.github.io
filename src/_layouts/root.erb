@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="<%= site.locale %>">
+  <head>
+    <%= render "head", metadata: site.metadata, title: data.title %>
+  </head>
+  <body class="<%= data.layout %> <%= data.page_class %>">
+    <%= render Shared::Navbar.new(metadata: site.metadata, resource: resource) %>
+
+    <main>
+      <div class="hero">
+        <%= yield %>
+      </div>
+      <h2>Projects</h2>
+      <ul>
+        <% collections.projects.resources.each do |project| %>
+          <li class="project">
+            <%= render "project", project: project %>
+          </li>
+        <% end %>
+      </ul>
+    </main>
+
+    <%= render "footer", metadata: site.metadata %>
+  </body>
+</html>
