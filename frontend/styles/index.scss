@@ -82,7 +82,7 @@ h4 {
     Times New Roman,
     serif;
   color: var(--heading-color);
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
 }
 
 h1 {
@@ -166,6 +166,10 @@ hr {
 .project h1 {
   display: inline-block;
   font-size: 1.2rem;
+}
+
+.project + .project {
+  margin-top: 1rem;
 }
 
 p + p {
