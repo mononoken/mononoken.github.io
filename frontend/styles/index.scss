@@ -95,6 +95,11 @@ h2 {
   font-size: 1.5rem;
 }
 
+img {
+  max-width: 100%;
+  max-height: 400px;
+}
+
 body > header {
   margin: 1rem;
   text-align: center;
@@ -163,7 +168,6 @@ hr {
   font-size: 1.2rem;
 }
 
-.hero img {
-  max-width: 100%;
-  max-height: 400px;
+p + p {
+  margin-top: 1rem;
 }
