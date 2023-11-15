@@ -37,3 +37,4 @@ collections:
   projects:
     output: true
     permalink: simple
+    sort_by: order
