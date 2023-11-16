@@ -28,7 +28,7 @@ template_engine: erb
 # ensure you use the `relative_url` helper for all links and assets in your HTML.
 # If you're using esbuild for frontend assets, edit `esbuild.config.js` to
 # update `publicPath`.
-base_path: "/feelsufo"
+base_path: "/"
 
 # timezone: America/Los_Angeles
 # pagination:
