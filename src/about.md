@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-<img src="/images/about_profile.jpeg" alt="Photo of Ken and Fae">
+![Photo of Ken and Fae](/images/about_profile.jpeg)
 
 Hi! I'm Ken Maeshima. I was born and raised in DFW, Texas. I was a city slicker, but I still say "y'all". I grew up traveling a lot, mostly to Oregon and Japan. Now, I reside where I've always wanted to live: Seattle, WA!
 
