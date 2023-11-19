@@ -1,6 +1,6 @@
-# Bridgetown Website README
+# mononoken.github.io
 
-Welcome to your new Bridgetown website! You can update this README file to provide additional context and setup information for yourself or other contributors.
+Created with [Bridgetown](https://www.bridgetownrb.com/)
 
 ## Table of Contents
 
@@ -29,6 +29,7 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 cd bridgetown-site-folder
 bundle install && yarn install
 ```
+
 > Learn more: [Bridgetown Getting Started Documentation](https://www.bridgetownrb.com/docs/).
 
 ## Development
