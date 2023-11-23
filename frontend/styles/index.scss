@@ -5,7 +5,14 @@
     font-family: "SourceSerif Variable";
     src: url("../fonts/SourceSerif4-Variable-subset.woff2") format("woff2");
     font-weight: 1 999;
-    font-style: oblique 0deg 10deg;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "SourceSerif Variable Italic";
+    src: url("../fonts/SourceSerif4-Variable-italic-subset.woff2")
+      format("woff2");
+    font-weight: 1 999;
     font-display: swap;
   }
 }
@@ -16,7 +23,6 @@
     url("../fonts/SourceSerif4-static-subset.woff2") format("woff2"),
     url("../fonts/SourceSerif4-static-subset.woff") format("woff");
   font-weight: 400;
-  font-style: italic;
   font-display: swap;
 }
 
@@ -32,11 +38,11 @@
   --body-background: #24283b;
   --body-color: #c0caf5;
   // --main-background: #24283b;
-  // --heading-color: #bb9af7;
   --hero-color: #bb9af7;
   --action-color: #ff9e64;
   --action-hover-color: #f7768e;
   --action-focus-color: #8c4351;
+  --quote-background: #414868;
 }
 
 html {
@@ -53,11 +59,17 @@ body {
   background: var(--body-background);
   color: var(--body-color);
   font-family:
-    "SourceSerif",
     "SourceSerif Static",
     -apple-system,
     Times New Roman,
     serif;
+  @supports (font-variation-settings: normal) {
+    font-family:
+      "SourceSerif Variable",
+      -apple-system,
+      Times New Roman,
+      serif;
+  }
   margin: 0 auto;
   padding: 0 22px;
   // font-size: 108%;
@@ -72,6 +84,14 @@ a {
   text-decoration-color: #ffb088;
 }
 
+a:hover {
+  color: var(--action-hover-color);
+}
+
+a:focus {
+  color: var(--action-focus-color);
+}
+
 h1,
 h2,
 h3,
@@ -81,7 +101,7 @@ h4 {
     -apple-system,
     Times New Roman,
     serif;
-  color: var(--heading-color);
+  color: var(--body-color);
   margin: 0 0 0.5rem;
 }
 
@@ -95,9 +115,49 @@ h2 {
   font-size: 1.5rem;
 }
 
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+  color: var(--body-color);
+}
+
+em,
+i {
+  font-style: italic;
+
+  @supports (font-variation-settings: normal) {
+    font-family: "SourceSerif Variable Italic";
+  }
+}
+
 img {
+  display: block;
   max-width: 100%;
   max-height: 400px;
+  margin: 0 auto;
+}
+
+blockquote {
+  background: var(--quote-background);
+  margin: 1rem 0;
+  padding: 12px 24px;
+  font-style: italic;
+
+  @supports (font-variation-settings: normal) {
+    font-family: "SourceSerif Variable Italic";
+  }
+}
+
+blockquote > footer {
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 
 body > header {
@@ -111,7 +171,7 @@ body > header img {
   max-width: 100%;
 }
 
-body > nav {
+nav {
   margin: 1rem 0;
   padding: 0;
   list-style-type: none;
@@ -121,18 +181,18 @@ body > nav {
   font-weight: bold;
 }
 
-body > nav ul {
+nav ul {
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
 }
 
-body > nav a:hover {
+a:hover {
   color: var(--action-hover-color);
 }
 
-body > nav a:focus {
+a:focus {
   color: var(--action-focus-color);
 }
 
@@ -173,5 +233,12 @@ hr {
 }
 
 p + p {
+  margin-top: 1rem;
+}
+
+p + h1,
+p + h2,
+p + h3,
+p + h4 {
   margin-top: 1rem;
 }
