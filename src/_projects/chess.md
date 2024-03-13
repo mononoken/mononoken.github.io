@@ -3,7 +3,7 @@ layout: project
 title: "Chess (CLI)"
 description: The board game chess, implemented in a command-line interface and built with Ruby.
 url: https://github.com/mononoken/chess
-order: 2
+order: 3
 ---
 
 This was the [final project of The Odin Project's Ruby course](https://www.theodinproject.com/lessons/ruby-ruby-final-project).
