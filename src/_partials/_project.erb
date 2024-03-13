@@ -1,5 +1,5 @@
 <div>
-  <h1><%= project.data.title %></h1>
+  <h1><%= link_to project.data.title, project.relative_url %></h1>
   <span>(<%= link_to "Github", project.data.url %>)</span>
 </div>
 <p>
