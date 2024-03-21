@@ -6,6 +6,8 @@ url: https://github.com/rubyforgood/pet-rescue
 order: 1
 ---
 
+![Home page of Pet Rescue Website](/images/pet-rescue-home.png)
+
 I joined this project in January 2024. After working on a few issues, I noticed the authorization throughout the application was inconsistent and even missing in some areas. I volunteered to implement an authorization framework for the entire app to address these issues.
 
 The resulting work took a little over a month and can be found in this PR [Authorization framework with Action Policy #466](https://github.com/rubyforgood/pet-rescue/pull/466).
@@ -15,3 +17,6 @@ I opted to use [Action Policy](https://actionpolicy.evilmartians.io/#/) for the 
 I wrote unit tests for every policy class created and also created tests for the controllers to make sure they utilized these policy objects properly. Rather than write integration tests for every different possible user context, I tested the user context's in the speedy unit tests and then simply tested the controller called the correct policy check in the controller action.
 
 After working on the app significantly, I was asked to join the project as a collaborator and member of the lead team to further help the project. I am continuing to work with the rubyforgood/pet-rescue team and having lots of fun doing so!
+
+![Page that utilizes Turbo for managing pet care-taking tasks](/images/pet-rescue-tasks.png)
+![One of the staff pages on the Pet Rescue website](/images/pet-rescue-staff.png)

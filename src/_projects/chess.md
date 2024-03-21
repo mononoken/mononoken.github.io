@@ -6,6 +6,8 @@ url: https://github.com/mononoken/chess
 order: 3
 ---
 
+![Chess program with command-line interface](/images/chess-cli.png)
+
 This was the [final project of The Odin Project's Ruby course](https://www.theodinproject.com/lessons/ruby-ruby-final-project).
 
 I read [Practical Object-Oriented Design: An Agile Primer Using Ruby by Sandi Metz](https://www.poodr.com/). Before starting this project. I tried to implement clean design using principles from the book. I also worked closely with a mentor I met through [First Ruby Friend](https://firstrubyfriend.org/) while working through this project. They reviewed areas that I had uncertainties about as well paired with me. Their feedback was invaluable.

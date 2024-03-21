@@ -6,6 +6,8 @@ url: https://github.com/mononoken/fae-scribe
 order: 2
 ---
 
+![Mobile view of Fae Scribe](/images/fae-scribe-mobile.png)
+
 Notes are input using Markdown syntax and rendered as HTML. The [Redcarpet](https://github.com/vmg/redcarpet) gem was utilized for this functionality, and I wrote some extensions to the renderer to allow for more custom syntax conversions.
 
 Much of this site was designed using BDD (behavior-driven development) methodologies. I created a user flow diagram to start. I used Github issues to organize what features and improvements I would want to add throughout the project. When a new feature was being tackled in an issue, I would typically start with writing system tests for the feature using RSpec and Capybara with a selenium webdriver. Unit test and integration tests would also be created as needed until the feature was fully implemented and all tests passed. This project has had over 80% test coverage as reported by Simplecov throughout its progress so far.
